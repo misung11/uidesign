@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Cookie</title>
+    <link rel="stylesheet" href="styleresult.css">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .result {
+            z-index: 1;
+            position: relative;
+        }
+        .fortune-text {
+            position: absolute;
+            color: #FF5C6F;
+            font-family: 'Cutive Mono', monospace;
+            font-size: 24px;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        .particule {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.7;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="chat.html">CHAT</a></li>
+                <li><a href="login.html">LOG IN</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <a href="result2.html"><img src="Vector 236.png" alt="Box Icon" class="result"></a>
+        <div class="fortune-text" id="fortune-text"></div>
+    </div>
+    
+    <script src="fortune.js"></script>
+</body>
+</html>
+
