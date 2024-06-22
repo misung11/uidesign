@@ -5,12 +5,12 @@ body {
 }
 
 .sidebar {
-    width: 200px;
+    width: 100px;
     background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid #f2f2f2;
+    
 }
 
 .sidebar nav ul {
@@ -18,18 +18,23 @@ body {
     padding: 0;
     margin: 0;
     text-align: center;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sidebar nav ul li {
-    margin: 250px 0; 
+    margin: 100px 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
 }
 
 .sidebar nav ul li a {
     text-decoration: none;
     color: #FF6F7D;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
-}
 
 .container {
     position: relative;

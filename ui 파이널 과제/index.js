@@ -1,41 +1,38 @@
-$(window).on('load', function() {
-    setFlowBanner();
-})
+document.addEventListener('DOMContentLoaded', function() {
+    var loginBtn = document.getElementById('loginBtn');
+    var popup = document.getElementById('loginPopup');
+    var closeBtn = document.querySelector('.popup-content .close');
 
-function setFlowBanner() {
-    const $wrap = $('.flow_banner');
-    const $list = $('.flow_banner .list');
-    let wrapWidth = $wrap.width();
-    let listWidth = $list.width();
-    const speed = 92; //1초에 몇픽셀 이동하는지 설정
+    loginBtn.addEventListener('click', function() {
+        popup.style.display = 'block';
+    });
 
-    //리스트 복제
-    let $clone = $list.clone();
-    $wrap.append($clone);
-    flowBannerAct()
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
 
-    //배너 실행 함수
-    function flowBannerAct() {
-        //무한 반복을 위해 리스트를 복제 후 배너에 추가
-        if (listWidth < wrapWidth) {
-            const listCount = Math.ceil(wrapWidth * 2 / listWidth);
-            for (let i = 2; i < listCount; i++) {
-                $clone = $clone.clone();
-                $wrap.append($clone);
-            }
+    window.addEventListener('click', function(event) {
+        if (event.target == popup) {
+            popup.style.display = 'none';
         }
-        $wrap.find('.list').css({
-            'animation': `${listWidth / speed}s linear infinite flowRolling`
+    });
+
+    // Image hover effect
+    var images = document.querySelectorAll('.box');
+    images.forEach(function(image) {
+        image.addEventListener('mouseover', function() {
+            image.style.transform = 'scale(1.1)';
+            image.style.transition = 'transform 0.3s ease';
         });
-    }
-
-    // 마우스가 요소 위로 진입했을 때 일시정지
-    $wrap.on('mouseenter', function () {
-        $wrap.find('.list').css('animation-play-state', 'paused');
+        image.addEventListener('mouseout', function() {
+            image.style.transform = 'scale(1)';
+        });
+        image.addEventListener('click', function() {
+            image.classList.add('shake');
+            setTimeout(function() {
+                image.classList.remove('shake');
+            }, 500);
+        });
     });
+});
 
-    // 마우스가 요소에서 빠져나갈 때 재생
-    $wrap.on('mouseleave', function () {
-        $wrap.find('.list').css('animation-play-state', 'running');
-    });
-}

@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .sidebar nav ul {
@@ -38,11 +39,11 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
     padding: 40px;
+    gap: 120px;
 }
 
 .image-container {
@@ -72,7 +73,7 @@ body {
 }
 
 .box5 {
-    width: 400px;
+    width: 430px;
     height: auto;
     animation: shake-grow 1s infinite;
 }
@@ -137,47 +138,3 @@ body {
     }
 }
 
-.result {
-    width: 750px;
-    height: auto;
-}
-
-.box6 {
-    width: 435px;
-    height: auto;
-    transform: translate(-200px, 55px);
-}
-
-.box7 {
-    width: 255px;
-    height: auto;
-    transform: translate(-115px, 38px); 
-}
-
-.box8 {
-    width: 235px;
-    height: auto;
-    transform: translate(110px, 47px);
-}
-
-.button-container {
-    margin-top: 100px; /* 이미지들 아래의 간격 */
-    text-align: center; /* 중앙 정렬 */
-    transform: translate(0px, 40px);
-}
-
-.lucky-button {
-    display: inline-block;
-    padding: 20px 30px;
-    font-size: 30px;
-    color: #fff;
-    background-color: #FF5C6F;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    transition: background-color 0.3s;
-}
-
-.lucky-button:hover {
-    background-color: #CD2135;
-}

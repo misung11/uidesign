@@ -13,7 +13,7 @@ function ELIZA_GENERATOR(user_sentence) {
     let words = user_sentence.toLowerCase().split(' ');
     let response = 'I am not sure I understand you fully.';
 
-    // 각 단어에 대한 응답을 개별적으로 확인하고 설정
+    
     for (let word of words) {
         if (word === 'hello') {
             response = 'Hello! I am your lucky mate, here to share some wisdom!';
@@ -418,28 +418,41 @@ function sendMessage() {
 
     let chatBox = document.getElementById('chat-box');
 
-    // 사용자 메시지
+   
     let userMessage = document.createElement('div');
     userMessage.textContent = 'You: ' + userInput;
-    chatBox.appendChild(userMessage);
+    chatBox.appendChild(userMessage); 
 
-    // ELIZA 응답 생성 및 추가
-    let elizaResponse = ELIZA_GENERATOR(userInput);
-    let botMessage = document.createElement('div');
-
-    // 이미지 태그 생성 및 추가
-    let botImage = document.createElement('img');
-    botImage.src = '🦆 icon _face profile woman_.png'; // 이미지 경로 설정
-    botMessage.appendChild(botImage);
-
-    // 텍스트 노드 추가
-    let botText = document.createElement('span');
-    botText.textContent = 'lucky mate: ' + elizaResponse;
-    botMessage.appendChild(botText);
-
-    chatBox.appendChild(botMessage);
+    
+    let typingIndicator = document.createElement('div');
+    typingIndicator.className = 'typing-indicator';
+    typingIndicator.innerHTML = '<div></div><div></div><div></div>';
+    chatBox.appendChild(typingIndicator); 
 
     document.getElementById('user-input').value = '';
-    chatBox.scrollTop = chatBox.scrollHeight;
+    chatBox.scrollTop = chatBox.scrollHeight; 
+
+    setTimeout(() => {
+        
+        typingIndicator.remove();
+
+        
+        let elizaResponse = ELIZA_GENERATOR(userInput);
+        let botMessage = document.createElement('div');
+
+        
+        let botImage = document.createElement('img');
+        botImage.src = '🦆 icon _face profile woman_.png'; 
+        botMessage.appendChild(botImage);
+
+        
+        let botText = document.createElement('span');
+        botText.textContent = 'lucky mate: ' + elizaResponse;
+        botMessage.appendChild(botText);
+
+        chatBox.appendChild(botMessage); 
+        chatBox.scrollTop = chatBox.scrollHeight; 
+    }, 2000); 
 }
+
 
