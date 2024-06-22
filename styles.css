@@ -1,0 +1,152 @@
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 60px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#dark-mode-toggle {
+    margin: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.intro {
+    flex: 1;
+}
+
+.intro p {
+    font-size: 1.2rem;
+}
+
+.intro p a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.intro h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    margin: 40;
+    line-height: 1.2;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    flex: 1;
+}
+
+.grid-item {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.grid-item:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.grid-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 340px; /* Make large item taller */
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode #dark-mode-toggle:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark-mode .grid-item {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode .grid-item:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark-mode .intro p a {
+    color: #ffffff;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    #content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-item.large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 800px) {
+    .intro h1 {
+        font-size: 4rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .grid-item {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    .grid-item.large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
