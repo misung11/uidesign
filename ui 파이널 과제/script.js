@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const box5 = document.querySelector('.box5');
-
-    
-    setTimeout(() => {
-        window.location.href = 'result.html'
-    }, 500);
+document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
 });
