@@ -150,3 +150,32 @@ body.dark-mode .intro p a {
         grid-row: span 1;
     }
 }
+
+.video-container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    height: 100vh; 
+    height: calc(100vh - 120px); 
+}
+
+.centered-video {
+    max-width: 100%; /* 비디오가 화면 크기에 맞게 조정됨 */
+    height: auto;
+}
+
+.interview {
+            margin-bottom: 40px;
+        }
+        .interview h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .question {
+            font-weight: bold;
+        }
+        .answer {
+            margin-bottom: 20px;
+        }
