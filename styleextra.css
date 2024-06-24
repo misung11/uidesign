@@ -1,0 +1,65 @@
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.extracredit {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button {
+    margin: 20px;
+    padding: 20px;
+    width: 250px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark-mode .nav-button {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode .nav-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
