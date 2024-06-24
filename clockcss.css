@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+}
+
+#clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#clock {
+    font-size: 3em;
+}
+
+.day {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.night {
+    background-color: #000000;
+    color: #ffffff;
+}
