@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     loadDiaries();
+    setDefaultDiary();
 });
 
 document.getElementById('uploadBtn').addEventListener('click', function() {
@@ -77,11 +78,18 @@ function addDiaryToList(diaryEntry) {
     diaryItem.appendChild(deleteBtn);
     diaryList.appendChild(diaryItem);
 
-    
+    // Add click event to display the diary entry
     diaryText.addEventListener('click', function() {
         document.getElementById('entryDate').value = diaryEntry.date;
         document.getElementById('entryTitle').value = diaryEntry.title;
         document.querySelector('#diaryEntry textarea').value = diaryEntry.content;
     });
 }
+
+function setDefaultDiary() {
+    const defaultDiary = {
+        date: "2023-04-13",
+        title: "Appreciate <the eyes that respond>",
+        content: `I realized that I could depict the world with pure forms and pure colors, and I realized the value of abstraction.\n\nViktor Bajarely is a Hungarian artist who became a master of op art after participating in an exhibition called The Reactive Eye. Op art is abstract art that plays with visual illusions using geometric shapes or color tensions, called "art of the retina" or "perceptual abstraction," and developed from the experimental tradition of the German Bauhaus and Russian structuralism. The Seoul Arts Center held the exhibition "The Reactive Eye" until April 21 to celebrate the 34th anniversary of the establishment of diplomatic relations between Korea and Hungary, and I saw it on April 13.\n\nIn fact, since we live in an era where images can be easily created with computers, I wasn't surprised when I entered the exhibition and saw the works. In particular, op art is a genre that has become so commonplace that I had to make it as a performance assessment in high school art class, and I wondered if I could write a good one-page review of the exhibition. But after seeing Bazzarelli's precise compositional planning and the process of creating his work, I changed my mind. He was creating his works through meticulous planning in an era when computers were not available. Even as a modern viewer, I'm amazed at the machine-made detail, but how fresh must it have felt to people back then? If I were living in that era, I think I would naturally be drawn into the visual illusion that the work creates.\n\nI think that detail and visual
+
 
