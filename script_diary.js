@@ -17,7 +17,7 @@ document.getElementById('uploadBtn').addEventListener('click', function() {
         saveDiary(diaryEntry);
         addDiaryToList(diaryEntry);
 
-        // Clear the input fields
+        
         document.getElementById('entryDate').value = '';
         document.getElementById('entryTitle').value = '';
         document.querySelector('#diaryEntry textarea').value = '';

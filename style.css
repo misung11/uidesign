@@ -162,7 +162,7 @@ body.dark-mode .intro p a {
 }
 
 .centered-video {
-    max-width: 100%; /* 비디오가 화면 크기에 맞게 조정됨 */
+    max-width: 100%; 
     height: auto;
 }
 
