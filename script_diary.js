@@ -77,7 +77,7 @@ function addDiaryToList(diaryEntry) {
     diaryItem.appendChild(deleteBtn);
     diaryList.appendChild(diaryItem);
 
-    // Add click event to display the diary entry
+    
     diaryText.addEventListener('click', function() {
         document.getElementById('entryDate').value = diaryEntry.date;
         document.getElementById('entryTitle').value = diaryEntry.title;
